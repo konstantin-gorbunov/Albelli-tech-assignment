@@ -11,23 +11,72 @@ import XCTest
 
 class EnhanceWrapperTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testEnhancerBase() {
+        let enhancer = Enhancer()
+        let input = "12345123451234512345123451234512345\0"
+        do {
+            let result = try enhancer.execute(withInputString: input)
+            XCTAssertEqual(result, "54321543215432154321543215432154321")
+        } catch {
+            XCTFail("no error expected")
+        }
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testEnhancerEmpty() {
+        let enhancer = Enhancer()
+        let input = "\0"
+        do {
+            let result = try enhancer.execute(withInputString: input)
+            XCTAssertEqual(result, "")
+        } catch {
+            XCTFail("no error expected")
+        }
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testEnhancerASCII() {
+        let enhancer = Enhancer()
+        let input = "abc12345123451234512345123451234512345\0"
+        do {
+            let result = try enhancer.execute(withInputString: input)
+            XCTAssertEqual(result, "54321543215432154321543215432154321cba")
+        } catch {
+            XCTFail("no error expected")
+        }
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testEnhancerErrorOne() {
+        let enhancer = Enhancer()
+        let input = "12345123451234512345123451234512345"
+        do {
+            let _ = try enhancer.execute(withInputString: input)
+            XCTFail("error expected")
+        } catch {
+            let errorCode = (error as NSError).code
+            XCTAssertEqual(errorCode, 1, "no null-character on the end")
+        }
+    }
+    
+    func testEnhancerErrorTwo() {
+        let enhancer = Enhancer()
+        let input = ""
+        do {
+            let _ = try enhancer.execute(withInputString: input)
+            XCTFail("error expected")
+        } catch {
+            let errorCode = (error as NSError).code
+            XCTAssertEqual(errorCode, 1, "no null-character on the end")
+        }
+    }
+    
+    func testEnhancerNonASCII() {
+        let enhancer = Enhancer()
+        let input = "abcЯ12345123451234512345123451234512345\0"
+        do {
+            let _ = try enhancer.execute(withInputString: input)
+            XCTFail("error expected")
+        } catch {
+            let errorCode = (error as NSError).code
+            XCTAssertEqual(errorCode, 2, "non ACSII character in the input string")
         }
     }
 

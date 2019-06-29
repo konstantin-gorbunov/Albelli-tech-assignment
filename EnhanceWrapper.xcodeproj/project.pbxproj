@@ -12,6 +12,10 @@
 		8B09D1AC22C7643700B637BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B09D1AB22C7643700B637BB /* Assets.xcassets */; };
 		8B09D1AF22C7643700B637BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B09D1AD22C7643700B637BB /* Main.storyboard */; };
 		8B09D1BB22C7643700B637BB /* EnhanceWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09D1BA22C7643700B637BB /* EnhanceWrapperTests.swift */; };
+		8BEA5D5922C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
+		8BEA5D5A22C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
+		8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5D6122C77A00004859F5 /* Enhancer.m */; };
+		8BEA5D6322C77A00004859F5 /* Enhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5D6122C77A00004859F5 /* Enhancer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,12 @@
 		8B09D1B622C7643700B637BB /* EnhanceWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnhanceWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B09D1BA22C7643700B637BB /* EnhanceWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhanceWrapperTests.swift; sourceTree = "<group>"; };
 		8B09D1BC22C7643700B637BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEA5D5722C76A33004859F5 /* GPEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnhance.h; sourceTree = "<group>"; };
+		8BEA5D5822C76A33004859F5 /* libGPEnhance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPEnhance.a; sourceTree = "<group>"; };
+		8BEA5D5F22C77A00004859F5 /* EnhanceWrapper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceWrapper-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BEA5D6022C77A00004859F5 /* EnhanceWrapperTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceWrapperTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BEA5D6122C77A00004859F5 /* Enhancer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enhancer.m; sourceTree = "<group>"; };
+		8BEA5D6422C77A1A004859F5 /* Enhancer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enhancer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEA5D5922C76A34004859F5 /* libGPEnhance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEA5D5A22C76A34004859F5 /* libGPEnhance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +72,7 @@
 			children = (
 				8B09D1A622C7643500B637BB /* EnhanceWrapper */,
 				8B09D1B922C7643700B637BB /* EnhanceWrapperTests */,
+				8BEA5D5222C7688B004859F5 /* Frameworks */,
 				8B09D1A522C7643500B637BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +95,10 @@
 				8B09D1AD22C7643700B637BB /* Main.storyboard */,
 				8B09D1B022C7643700B637BB /* Info.plist */,
 				8B09D1B122C7643700B637BB /* EnhanceWrapper.entitlements */,
+				8BEA5D6422C77A1A004859F5 /* Enhancer.h */,
+				8BEA5D6122C77A00004859F5 /* Enhancer.m */,
+				8BEA5D5F22C77A00004859F5 /* EnhanceWrapper-Bridging-Header.h */,
+				8BEA5D6022C77A00004859F5 /* EnhanceWrapperTests-Bridging-Header.h */,
 			);
 			path = EnhanceWrapper;
 			sourceTree = "<group>";
@@ -93,6 +110,15 @@
 				8B09D1BC22C7643700B637BB /* Info.plist */,
 			);
 			path = EnhanceWrapperTests;
+			sourceTree = "<group>";
+		};
+		8BEA5D5222C7688B004859F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA5D5722C76A33004859F5 /* GPEnhance.h */,
+				8BEA5D5822C76A33004859F5 /* libGPEnhance.a */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +171,11 @@
 				TargetAttributes = {
 					8B09D1A322C7643500B637BB = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					8B09D1B522C7643700B637BB = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 8B09D1A322C7643500B637BB;
 					};
 				};
@@ -197,6 +225,7 @@
 			files = (
 				8B09D1AA22C7643500B637BB /* ViewController.swift in Sources */,
 				8B09D1A822C7643500B637BB /* AppDelegate.swift in Sources */,
+				8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B09D1BB22C7643700B637BB /* EnhanceWrapperTests.swift in Sources */,
+				8BEA5D6322C77A00004859F5 /* Enhancer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +318,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -342,6 +373,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -349,18 +381,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EnhanceWrapper/EnhanceWrapper.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EnhanceWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.contrall.gk.EnhanceWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnhanceWrapper/EnhanceWrapper-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Main-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -369,18 +410,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EnhanceWrapper/EnhanceWrapper.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EnhanceWrapper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.contrall.gk.EnhanceWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnhanceWrapper/EnhanceWrapper-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Main-Swift.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -390,6 +439,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -399,9 +449,15 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.contrall.gk.EnhanceWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnhanceWrapper/EnhanceWrapperTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnhanceWrapper.app/Contents/MacOS/EnhanceWrapper";
 			};
@@ -412,6 +468,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -421,9 +478,14 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.contrall.gk.EnhanceWrapperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EnhanceWrapper/EnhanceWrapperTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnhanceWrapper.app/Contents/MacOS/EnhanceWrapper";
 			};
