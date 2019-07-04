@@ -15,7 +15,8 @@
 		8BEA5D5922C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
 		8BEA5D5A22C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
 		8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5D6122C77A00004859F5 /* Enhancer.m */; };
-		8BEA5D6322C77A00004859F5 /* Enhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5D6122C77A00004859F5 /* Enhancer.m */; };
+		8BEA5DB022CA05A6004859F5 /* EnhancerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5DAF22CA05A6004859F5 /* EnhancerManager.swift */; };
+		8BEA5DB122CA05A6004859F5 /* EnhancerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5DAF22CA05A6004859F5 /* EnhancerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		8BEA5D6022C77A00004859F5 /* EnhanceWrapperTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceWrapperTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BEA5D6122C77A00004859F5 /* Enhancer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enhancer.m; sourceTree = "<group>"; };
 		8BEA5D6422C77A1A004859F5 /* Enhancer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enhancer.h; sourceTree = "<group>"; };
+		8BEA5DAF22CA05A6004859F5 /* EnhancerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				8B09D1B122C7643700B637BB /* EnhanceWrapper.entitlements */,
 				8BEA5D6422C77A1A004859F5 /* Enhancer.h */,
 				8BEA5D6122C77A00004859F5 /* Enhancer.m */,
+				8BEA5DAF22CA05A6004859F5 /* EnhancerManager.swift */,
 				8BEA5D5F22C77A00004859F5 /* EnhanceWrapper-Bridging-Header.h */,
 				8BEA5D6022C77A00004859F5 /* EnhanceWrapperTests-Bridging-Header.h */,
 			);
@@ -226,6 +229,7 @@
 				8B09D1AA22C7643500B637BB /* ViewController.swift in Sources */,
 				8B09D1A822C7643500B637BB /* AppDelegate.swift in Sources */,
 				8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */,
+				8BEA5DB022CA05A6004859F5 /* EnhancerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEA5DB122CA05A6004859F5 /* EnhancerManager.swift in Sources */,
 				8B09D1BB22C7643700B637BB /* EnhanceWrapperTests.swift in Sources */,
-				8BEA5D6322C77A00004859F5 /* Enhancer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

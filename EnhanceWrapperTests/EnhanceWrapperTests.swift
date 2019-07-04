@@ -11,8 +11,14 @@ import XCTest
 
 class EnhanceWrapperTests: XCTestCase {
 
+    private var enhancer: EnhancerProtocol!
+    
+    override func setUp() {
+        super.setUp()
+        enhancer = Enhancer()
+    }
+    
     func testEnhancerBase() {
-        let enhancer = Enhancer()
         let input = "12345123451234512345123451234512345\0"
         do {
             let result = try enhancer.execute(withInputString: input)
@@ -23,7 +29,6 @@ class EnhanceWrapperTests: XCTestCase {
     }
     
     func testEnhancerEmpty() {
-        let enhancer = Enhancer()
         let input = "\0"
         do {
             let result = try enhancer.execute(withInputString: input)
@@ -34,7 +39,6 @@ class EnhanceWrapperTests: XCTestCase {
     }
     
     func testEnhancerASCII() {
-        let enhancer = Enhancer()
         let input = "abc12345123451234512345123451234512345\0"
         do {
             let result = try enhancer.execute(withInputString: input)
@@ -45,7 +49,6 @@ class EnhanceWrapperTests: XCTestCase {
     }
     
     func testEnhancerErrorOne() {
-        let enhancer = Enhancer()
         let input = "12345123451234512345123451234512345"
         do {
             let _ = try enhancer.execute(withInputString: input)
@@ -57,7 +60,6 @@ class EnhanceWrapperTests: XCTestCase {
     }
     
     func testEnhancerErrorTwo() {
-        let enhancer = Enhancer()
         let input = ""
         do {
             let _ = try enhancer.execute(withInputString: input)
@@ -69,7 +71,6 @@ class EnhanceWrapperTests: XCTestCase {
     }
     
     func testEnhancerNonASCII() {
-        let enhancer = Enhancer()
         let input = "abcЯ12345123451234512345123451234512345\0"
         do {
             let _ = try enhancer.execute(withInputString: input)
