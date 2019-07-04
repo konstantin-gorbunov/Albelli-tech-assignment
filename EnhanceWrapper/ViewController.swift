@@ -10,9 +10,31 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    private enum Constants {
+        static let textFieldHeight: Int = 15
+    }
+    
     @IBOutlet weak var countOfThreadTextField: NSTextField?
     @IBOutlet weak var generateErrorButton: NSButton?
-    @IBOutlet weak var stackView: NSStackView?
+    
+    private let scrollView = NSScrollView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.hasVerticalScroller = true
+        scrollView.documentView = FlippedView.init()
+        
+        view.addSubview(scrollView)
+        
+        NSLayoutConstraint.activate([
+            scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            scrollView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
+            scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -10)
+            ])
+    }
     
     // MARK: - IBActions - menus
     
@@ -65,9 +87,19 @@ class ViewController: NSViewController {
     
     private func addResultToScrollView(_ string: String) {
         DispatchQueue.main.async { [weak self] in
-            if let textField = self?.createTextField(string) {
-                self?.stackView?.addArrangedSubview(textField)
+            if let textField = self?.createTextField(string),
+                let documentView = self?.scrollView.documentView,
+                let scrollView = self?.scrollView {
+                
+                let countOfAddedElements = documentView.subviews.filter { $0 is NSTextField }.count
+                
+                textField.frame = CGRect(x:0, y: Constants.textFieldHeight * countOfAddedElements, width: 0, height: 0)
+                documentView.addSubview(textField)
+                
+                documentView.frame = CGRect(x:0, y: 0, width: Int(scrollView.frame.size.width), height: (countOfAddedElements + 1) * Constants.textFieldHeight)
                 textField.sizeToFit()
+            } else {
+                print("Something is wrong.")
             }
         }
     }

@@ -101,7 +101,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="EnhanceWrapper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" autoresizesSubviews="NO" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
@@ -119,46 +119,8 @@
                                     <action selector="startSelected:" target="XfG-lQ-9wD" id="la3-CH-anE"/>
                                 </connections>
                             </button>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM2-dG-PJD">
-                                <rect key="frame" x="20" y="14" width="440" height="201"/>
-                                <clipView key="contentView" id="nTa-Hn-8iA">
-                                    <rect key="frame" x="1" y="1" width="438" height="199"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <view translatesAutoresizingMaskIntoConstraints="NO" id="xD6-bt-YL8">
-                                            <rect key="frame" x="0.0" y="0.0" width="423" height="184"/>
-                                            <subviews>
-                                                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5j-YT-jlw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="423" height="184"/>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="d5j-YT-jlw" secondAttribute="trailing" id="2Mc-lP-gM8"/>
-                                                <constraint firstItem="d5j-YT-jlw" firstAttribute="centerX" secondItem="xD6-bt-YL8" secondAttribute="centerX" id="6Bf-Sp-Llx"/>
-                                                <constraint firstItem="d5j-YT-jlw" firstAttribute="top" secondItem="xD6-bt-YL8" secondAttribute="top" id="B78-hA-dlI"/>
-                                                <constraint firstAttribute="bottom" secondItem="d5j-YT-jlw" secondAttribute="bottom" id="SLu-LJ-tvU"/>
-                                                <constraint firstItem="d5j-YT-jlw" firstAttribute="leading" secondItem="xD6-bt-YL8" secondAttribute="leading" id="rYq-Fl-s1e"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="xD6-bt-YL8" firstAttribute="top" secondItem="nTa-Hn-8iA" secondAttribute="top" constant="15" id="7qt-Fz-4QU"/>
-                                        <constraint firstItem="xD6-bt-YL8" firstAttribute="leading" secondItem="nTa-Hn-8iA" secondAttribute="leading" id="9u3-wC-cFe"/>
-                                        <constraint firstAttribute="bottom" secondItem="xD6-bt-YL8" secondAttribute="bottom" id="KwK-8c-HQM"/>
-                                        <constraint firstAttribute="trailing" secondItem="xD6-bt-YL8" secondAttribute="trailing" constant="15" id="LkF-s2-0z1"/>
-                                    </constraints>
-                                </clipView>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="z2r-rV-kHS">
-                                    <rect key="frame" x="1" y="184" width="438" height="16"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lqN-Hm-5Jf">
-                                    <rect key="frame" x="423" y="1" width="16" height="199"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
-                            <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-zq-0Eo">
-                                <rect key="frame" x="314" y="228" width="96" height="22"/>
+                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-zq-0Eo">
+                                <rect key="frame" x="314" y="229" width="96" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="25" placeholderString="Count of threads" drawsBackground="YES" id="N58-1l-uCz">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="h4G-C2-hke"/>
                                     <font key="font" metaFont="system"/>
@@ -166,8 +128,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-TV-h2m">
-                                <rect key="frame" x="65" y="230" width="118" height="18"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-TV-h2m">
+                                <rect key="frame" x="65" y="231" width="118" height="18"/>
                                 <buttonCell key="cell" type="check" title="Generate errors" bezelStyle="regularSquare" imagePosition="left" inset="2" id="LEZ-el-2TS">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -175,24 +137,18 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="QM2-dG-PJD" firstAttribute="top" secondItem="kVx-0m-21b" secondAttribute="bottom" constant="14" id="HdI-7b-xYs"/>
-                            <constraint firstItem="QM2-dG-PJD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Hep-tJ-e5U"/>
                             <constraint firstItem="kVx-0m-21b" firstAttribute="leading" secondItem="UTD-TV-h2m" secondAttribute="trailing" constant="30" id="Ola-yB-1zb"/>
                             <constraint firstItem="kVx-0m-21b" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="PhU-Pj-R4M"/>
-                            <constraint firstItem="kVx-0m-21b" firstAttribute="centerX" secondItem="QM2-dG-PJD" secondAttribute="centerX" id="Rfp-QQ-yDY"/>
                             <constraint firstItem="T9m-zq-0Eo" firstAttribute="top" secondItem="kVx-0m-21b" secondAttribute="top" id="TOu-tN-7Vo"/>
                             <constraint firstItem="T9m-zq-0Eo" firstAttribute="leading" secondItem="kVx-0m-21b" secondAttribute="trailing" constant="45" id="aPz-h9-cz6"/>
-                            <constraint firstItem="QM2-dG-PJD" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="baO-R0-ZV0"/>
                             <constraint firstItem="T9m-zq-0Eo" firstAttribute="centerY" secondItem="kVx-0m-21b" secondAttribute="centerY" id="cVn-tc-Pt5"/>
                             <constraint firstItem="kVx-0m-21b" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="pvb-PX-Oxe"/>
                             <constraint firstItem="UTD-TV-h2m" firstAttribute="baseline" secondItem="T9m-zq-0Eo" secondAttribute="baseline" id="vax-WB-ixt"/>
-                            <constraint firstAttribute="bottom" secondItem="QM2-dG-PJD" secondAttribute="bottom" constant="14" id="zlP-dj-MRW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countOfThreadTextField" destination="T9m-zq-0Eo" id="NIK-oA-FIN"/>
                         <outlet property="generateErrorButton" destination="UTD-TV-h2m" id="kkD-mB-SjM"/>
-                        <outlet property="stackView" destination="d5j-YT-jlw" id="8gq-Xk-puT"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

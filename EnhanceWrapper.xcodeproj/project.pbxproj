@@ -12,6 +12,7 @@
 		8B09D1AC22C7643700B637BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B09D1AB22C7643700B637BB /* Assets.xcassets */; };
 		8B09D1AF22C7643700B637BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B09D1AD22C7643700B637BB /* Main.storyboard */; };
 		8B09D1BB22C7643700B637BB /* EnhanceWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09D1BA22C7643700B637BB /* EnhanceWrapperTests.swift */; };
+		8B4B9BF222CE3D4D003CDBEB /* FlippedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B9BF122CE3D4D003CDBEB /* FlippedView.swift */; };
 		8BEA5D5922C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
 		8BEA5D5A22C76A34004859F5 /* libGPEnhance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEA5D5822C76A33004859F5 /* libGPEnhance.a */; };
 		8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA5D6122C77A00004859F5 /* Enhancer.m */; };
@@ -40,6 +41,7 @@
 		8B09D1B622C7643700B637BB /* EnhanceWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnhanceWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B09D1BA22C7643700B637BB /* EnhanceWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhanceWrapperTests.swift; sourceTree = "<group>"; };
 		8B09D1BC22C7643700B637BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B4B9BF122CE3D4D003CDBEB /* FlippedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippedView.swift; sourceTree = "<group>"; };
 		8BEA5D5722C76A33004859F5 /* GPEnhance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnhance.h; sourceTree = "<group>"; };
 		8BEA5D5822C76A33004859F5 /* libGPEnhance.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPEnhance.a; sourceTree = "<group>"; };
 		8BEA5D5F22C77A00004859F5 /* EnhanceWrapper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnhanceWrapper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				8BEA5D6422C77A1A004859F5 /* Enhancer.h */,
 				8BEA5D6122C77A00004859F5 /* Enhancer.m */,
 				8BEA5DAF22CA05A6004859F5 /* EnhancerManager.swift */,
+				8B4B9BF122CE3D4D003CDBEB /* FlippedView.swift */,
 				8BEA5D5F22C77A00004859F5 /* EnhanceWrapper-Bridging-Header.h */,
 				8BEA5D6022C77A00004859F5 /* EnhanceWrapperTests-Bridging-Header.h */,
 			);
@@ -230,6 +233,7 @@
 				8B09D1A822C7643500B637BB /* AppDelegate.swift in Sources */,
 				8BEA5D6222C77A00004859F5 /* Enhancer.m in Sources */,
 				8BEA5DB022CA05A6004859F5 /* EnhancerManager.swift in Sources */,
+				8B4B9BF222CE3D4D003CDBEB /* FlippedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
